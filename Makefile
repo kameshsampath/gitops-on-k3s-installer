@@ -14,10 +14,10 @@ build-plugin: ## Build plugin image locally
 	docker tag $(IMAGE):$(TAG) $(IMAGE):$(TAG)
 
 push-plugin: prepare-buildx ## Build & Upload extension image to hub. Do not push if tag already exists: TAG=$(svu c) make push-extension
-	docker pull $(IMAGE):$$(svu patch) && echo "Failure: Tag already exists" || docker buildx build --push --builder=$(BUILDER) --platform=linux/amd64,linux/arm64 --build-arg TAG=$$(svu patch) --tag=$(IMAGE):$$(svu patch) --tag=$(IMAGE):latest -f $(DOCKER_FILE) .
+	docker pull $(IMAGE):$(TAG) && echo "Failure: Tag already exists" || docker buildx build --push --builder=$(BUILDER) --platform=linux/amd64,linux/arm64 --build-arg TAG=$(TAG) --tag=$(IMAGE):$(TAG) --tag=$(IMAGE):latest -f $(DOCKER_FILE) .
 
 release:	
-	git tag "$$(shell patch)"
+	git tag $(TAG)
 	git push --tags
 
 help: ## Show this help
