@@ -1,6 +1,6 @@
-# Drone Plugin to Setup Drone, ArgoCD and Gitea Stack
+# Drone Plugin to Setup Drone, ArgoCD and Gitea (DRAG) Stack
 
-A [Drone](https://drone.io) plugin to install and configure local k3s cluster with [Drone, ArgoCD and Gitea](https://github.com/kameshsampath/dag-stack)
+A [Drone](https://drone.io) plugin to install and configure local k3s cluster with [Drone, ArgoCD and Gitea](https://github.com/kameshsampath/drag-stack).
 
 ## Usage
 

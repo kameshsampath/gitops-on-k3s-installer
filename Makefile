@@ -1,4 +1,4 @@
-IMAGE?=kameshsampath/drone-dag-installer
+IMAGE?=kameshsampath/drone-drag-installer
 TAG?=latest
 SHELL := bash
 CURRENT_DIR = $(shell pwd)
