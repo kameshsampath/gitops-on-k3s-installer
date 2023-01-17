@@ -38,8 +38,8 @@ unset KUBECONFIG
 
 if [ -n "${PLUGIN_DELETE_CLUSTER}" ];
 then
-  . hack/kill.sh
-  [[ -d "$DRONE_WORKSPACE/.kube" ]] &&  rm -rf "$DRONE_WORKSPACE/.kube/*"
+  #. hack/kill.sh
+  [[ -d "${DRONE_WORKSPACE}/.kube" ]] &&  rm -rf "${DRONE_WORKSPACE}/.kube"
   exit 0
 fi
 

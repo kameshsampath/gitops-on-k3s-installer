@@ -8,8 +8,8 @@ steps:
   image: kameshsampath/gitops-on-k3s-installer
   pull: never
   settings:
-    # delete_cluster: false
-    create_cluster: true
+    # delete_cluster: true
+    create_cluster: false
     k3d_cluster_name: my-gitops-demo
     install_components:
       - gitea
