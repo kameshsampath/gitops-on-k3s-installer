@@ -1,4 +1,4 @@
-IMAGE?=kameshsampath/drag-installer
+IMAGE?=kameshsampath/gitops-on-k3s-installer
 TAG?=latest
 SHELL := bash
 CURRENT_DIR = $(shell pwd)
